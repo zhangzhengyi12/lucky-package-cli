@@ -6,11 +6,9 @@
 </template>
 
 <script>
-import LuckyInput from '../packages/lucky-input'
 
 export default {
-  name: 'app',
-  components: { LuckyInput }
+  name: 'app'
 }
 </script>
 

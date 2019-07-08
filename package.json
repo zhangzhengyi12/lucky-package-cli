@@ -1,15 +1,11 @@
 {
-  "name": "luckytiger.package.cli",
-  "version": "1.0.0",
+  "name": "luckytiger-package-cli",
+  "version": "1.0.2",
   "description": "package-cli",
-  "main": "index.js",
-  "scripts": {
-    "test": "node bin/create"
-  },
   "bin": {
-    "lucky": "bin/create"
+    "lucky": "bin/lucky"
   },
-  "author": "",
+  "author": "zhangzhengyi",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.2",

@@ -3,21 +3,25 @@
 const program = require('commander')
 const chalk = require('chalk')
 
-program.version('0.0.1')
-.usage('<command> [options]')
+program.version('0.0.1').usage('<command> [options]')
 
-program.command('create <app-name>')
-.description('创建一个全新的 npm 组件模块')
-.action((name,cmd)=>{
-  const options = cleanArgs(cmd)
-  require('../lib/create')(name,options)
-})
+program
+  .command('create <app-name>')
+  .description('创建一个全新的 npm 组件模块')
+  .action((name, cmd) => {
+    const options = cleanArgs(cmd)
+    require('../lib/create')(name, options)
+  })
+
+if (!process.argv.slice(2).length) {
+  program.outputHelp()
+}
 
 program.parse(process.argv)
 
 // commander passes the Command object itself as options,
 // extract only actual options into a fresh object.
-function cleanArgs (cmd) {
+function cleanArgs(cmd) {
   const args = {}
   cmd.options.forEach(o => {
     const key = camelize(o.long.replace(/^--/, ''))
