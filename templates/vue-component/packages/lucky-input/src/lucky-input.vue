@@ -1,7 +1,7 @@
 <template>
   <div>
     你的试验场
-    <input type="text" v-model="value" />
+    <input type="text" :class="size" v-model="value" />
   </div>
 </template>
 
@@ -10,6 +10,9 @@
 // 注意大小写
 export default {
   name: 'LuckyInput',
+  props: {
+    size: String
+  },
   data () {
     return {
       value: 'AABB'
