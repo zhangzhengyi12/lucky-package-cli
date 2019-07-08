@@ -1,9 +1,15 @@
 {
   "name": "luckytiger-package-cli",
-  "version": "1.0.3",
+  "version": "1.1.9",
   "description": "package-cli",
   "bin": {
     "lucky": "bin/lucky"
+  },
+  "scripts": {
+    "lucky": "node bin/lucky",
+    "bootstarp": "cnpm i && cd ./templates/js-lib/ &&  cnpm i  && cd ../vue-component/ && cnpm i ",
+    "dev:js-lib": "cd templates/js-lib  && npm run dev",
+    "dev:vue-component": "cd templates/vue-component && npm run dev"
   },
   "author": "zhangzhengyi",
   "license": "ISC",
