@@ -10,7 +10,7 @@
     "bootstarp": "cnpm i && cd ./templates/js-lib/ &&  cnpm i   && cd ../vue-component/ && cnpm i  ",
     "dev:js-lib": "cd templates/js-lib  && npm run dev",
     "dev:vue-component": "cd templates/vue-component && npm run dev",
-    "dev:create": "node bin/lucky create test-app",
+    "dev:create": "rm -rf test-app && node bin/lucky create test-app",
     "clear": "sudo rm -rf node_modules && sudo rm -rf templates/js-lib/node_modules && sudo rm -rf templates/vue-component/node_modules"
   },
   "author": "zhangzhengyi",
