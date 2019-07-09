@@ -10,11 +10,6 @@
     "lint": "vue-cli-service lint"
   },
   "main": "lib/lucky.common.js",
-  "files": [
-    "package.json",
-    "lib",
-    "types"
-  ],
   "typings": "types/index.d.ts",
   "dependencies": {},
   "devDependencies": {

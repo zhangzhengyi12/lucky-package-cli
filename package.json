@@ -1,15 +1,17 @@
 {
   "name": "luckytiger-package-cli",
-  "version": "1.1.9",
+  "version": "1.1.14",
   "description": "package-cli",
   "bin": {
     "lucky": "bin/lucky"
   },
   "scripts": {
     "lucky": "node bin/lucky",
-    "bootstarp": "cnpm i && cd ./templates/js-lib/ &&  cnpm i  && cd ../vue-component/ && cnpm i ",
+    "bootstarp": "cnpm i && cd ./templates/js-lib/ &&  cnpm i   && cd ../vue-component/ && cnpm i  ",
     "dev:js-lib": "cd templates/js-lib  && npm run dev",
-    "dev:vue-component": "cd templates/vue-component && npm run dev"
+    "dev:vue-component": "cd templates/vue-component && npm run dev",
+    "dev:create": "node bin/lucky create test-app",
+    "clear": "sudo rm -rf node_modules && sudo rm -rf templates/js-lib/node_modules && sudo rm -rf templates/vue-component/node_modules"
   },
   "author": "zhangzhengyi",
   "license": "ISC",
@@ -17,7 +19,6 @@
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "ejs": "^2.6.2",
-    "eslint-config-standard": "^12.0.0",
     "inquirer": "^6.4.1",
     "validate-npm-package-name": "^3.0.0"
   }
